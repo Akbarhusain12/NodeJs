@@ -9,18 +9,21 @@ function App() {
   const [jokes, setJokes] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:3000/jokes')
+    axios.get('/api/jokes')
       .then((response) => {
+        // console.log(response.data)
         setJokes(response.data)
       })
       .catch((error) => {
-        console.error(error);
+        console.log(error);
       })
-  }, []) 
+  }) 
 
   return (
     <>
       <h1>Frontend with backend</h1>
+      {/* {console.log(jokes)} */}
+      
       <p>JOKES : {jokes.length}</p>
       {
         jokes.map((joke, index) => ( 
