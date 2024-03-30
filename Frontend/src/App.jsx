@@ -22,7 +22,6 @@ function App() {
   return (
     <>
       <h1>Frontend with backend</h1>
-      {/* {console.log(jokes)} */}
       
       <p>JOKES : {jokes.length}</p>
       {
