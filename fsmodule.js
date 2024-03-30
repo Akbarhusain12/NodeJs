@@ -1,4 +1,4 @@
-const fs = require('fs');
+// const fs = require('fs');
 
 // fs.readFile('example.txt','utf8',(err,data) =>{
 //     console.log(err,data)
@@ -20,7 +20,33 @@ const fs = require('fs');
 
 // console.log("Finished writing file")
 
-const b = fs.writeFileSync('file.txt',"This is the content for new file kmdjjicjdcndc")
+// const b = fs.writeFileSync('file.txt',"This is the content for new file kmdjjicjdcndc")
 
-console.log(b)
-console.log("Finished writing file")
+// console.log(b)
+// console.log("Finished writing file")
+
+import { Console } from 'console';
+import fs from 'fs';
+
+// fs.stat('file.txt', (err, stats) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         // Print out the statistics
+//         console.log('File stats:', stats);
+//         // You can access specific properties of the stats object like this:
+//         console.log('File size:', stats.size);
+//         console.log('Is directory?', stats.isDirectory());
+//         console.log('Is file?', stats.isFile());
+        
+//     }
+// });
+
+fs.readFile('file.txt', 'utf8', (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    
+    console.log('File content:', data);
+});
