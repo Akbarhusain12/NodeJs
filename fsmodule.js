@@ -25,8 +25,8 @@
 // console.log(b)
 // console.log("Finished writing file")
 
-import { Console } from 'console';
-import fs from 'fs';
+// import { Console } from 'console';
+// import fs from 'fs';
 
 // fs.stat('file.txt', (err, stats) => {
 //     if (err) {
@@ -42,11 +42,23 @@ import fs from 'fs';
 //     }
 // });
 
-fs.readFile('file.txt', 'utf8', (err, data) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
+// fs.readFile('file.txt', 'utf8', (err, data) => {
+//     if (err) {
+//         console.error(err);
+//         return;
+//     }
     
-    console.log('File content:', data);
-});
+//     console.log('File content:', data);
+// });
+
+
+// import path from 'path'
+const path = require('path')
+
+const filedes = ('D:/Node js in one/file.txt')
+
+console.log(path.dirname(filedes))
+console.log(path.basename(filedes))
+console.log(path.extname(filedes))
+
+
